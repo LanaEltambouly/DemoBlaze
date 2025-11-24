@@ -19,6 +19,7 @@ public class BaseTestClass {
     protected HomePage homepage;
     protected SignUpPage signuppage;
     protected LogInPage loginPage;
+    protected ProductPage productPage;
 
 
 
@@ -26,7 +27,7 @@ public class BaseTestClass {
     public void setUp(){
         driver = new FirefoxDriver();
         homepage = new HomePage(driver);
-        wait = new WebDriverWait(driver,Duration.ofSeconds(15));
+        //wait = new WebDriverWait(driver,Duration.ofSeconds(15));
     }
 
     @BeforeMethod

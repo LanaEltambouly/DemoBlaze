@@ -1,41 +1,56 @@
 package Pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class ProductPage {
     WebDriver driver;
+    WebDriverWait wait;
     By AddToCartLocator = By.xpath("//a[@onclick='addToCart(1)']");
     By ProductNameLocator = By.className("name");
     By ProductPriceLocator = By.className("price-container");
+    By Productimg = By.xpath("//div[@id='imgp']");
     By ProductDescriptionLocator = By.id("more-information");
-    By okButtonLocator = By.xpath("//button[text()='OK']");
     String AddToCartExpectedMess = "Product added.";
-    //By AddToCartActualMessLocator = By.
+
 
     public ProductPage(WebDriver driver){
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
     public void clickAddToCart(){
-        driver.findElement(AddToCartLocator).click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(AddToCartLocator))).click();
     }
-    public String getProductName(){
-        return driver.findElement(ProductNameLocator).getText();
+    public boolean checkProductName(){
+        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(ProductNameLocator))).isDisplayed();
     }
-    public String getProductDescription(){
-        return driver.findElement(ProductDescriptionLocator).getText();
+    public boolean checkProductimg(){
+        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(Productimg))).isDisplayed();
     }
-    public String getProductPrice(){
-        return driver.findElement(ProductPriceLocator).getText();
+    public boolean checkProductPrice(){
+        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(ProductPriceLocator))).isDisplayed();
+    }
+    public boolean checkProductDescription(){
+        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(ProductDescriptionLocator))).isDisplayed();
     }
     public String getAddToCartExpectedMess(){
         return AddToCartExpectedMess;
     }
-//    public String getAddToCartActualMess(){
-//        return driver.findElement(AddToCartActualMessLocator).getText();
-//    }
-      public void clickOK() {
-        driver.findElement(okButtonLocator).click();
-     }
+    public void clickOnOk(){
+        wait.until(ExpectedConditions.alertIsPresent());
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+    }
+    public String getActualMess(){
+        wait.until(ExpectedConditions.alertIsPresent());
+        Alert alert = driver.switchTo().alert();
+        return alert.getText();
+    }
+
 
 }
