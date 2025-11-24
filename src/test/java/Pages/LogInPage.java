@@ -26,10 +26,10 @@ public class LogInPage {
     }
 
     public void setUsername(String username) {
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(UsernameLocator))).sendKeys(username);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(UsernameLocator)).sendKeys(username);
     }
     public void setPassword(String password){
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(PasswordLocator))).sendKeys(password);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(PasswordLocator)).sendKeys(password);
     }
     public void clickOnLogIn(){
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(LogInButtonLocator))).click();

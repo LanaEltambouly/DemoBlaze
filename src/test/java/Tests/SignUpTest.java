@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class SignUpTest extends BaseTestClass {
+public class SignUpTest extends BaseTestClass{
     @Test
     public void verifyValidSignUp(){
         signuppage = homepage.clickOnSignUp();

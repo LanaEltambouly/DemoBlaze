@@ -19,21 +19,21 @@ public class BaseTestClass {
     protected HomePage homepage;
     protected SignUpPage signuppage;
     protected LogInPage loginPage;
+    protected CartPage cartPage;
     protected ProductPage productPage;
-
+    protected PlaceOrderPage placeOrderPage;
 
 
     @BeforeClass
     public void setUp(){
         driver = new FirefoxDriver();
         homepage = new HomePage(driver);
-        //wait = new WebDriverWait(driver,Duration.ofSeconds(15));
+        wait = new WebDriverWait(driver,Duration.ofSeconds(15));
     }
 
     @BeforeMethod
     public void goToHomePage(){
         driver.get("https://demoblaze.com/");
-       // wait = new WebDriverWait(driver,Duration.ofSeconds(15));
     }
 
     @AfterClass

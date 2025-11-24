@@ -11,12 +11,12 @@ import java.time.Duration;
 public class ProductPage {
     WebDriver driver;
     WebDriverWait wait;
-    By AddToCartLocator = By.xpath("//a[@onclick='addToCart(1)']");
+    By AddToCartLocator = By.linkText("Add to cart");
     By ProductNameLocator = By.className("name");
     By ProductPriceLocator = By.className("price-container");
     By Productimg = By.xpath("//div[@id='imgp']");
     By ProductDescriptionLocator = By.id("more-information");
-    String AddToCartExpectedMess = "Product added.";
+    String AddToCartExpectedMess = "Product added";
 
 
     public ProductPage(WebDriver driver){
@@ -24,19 +24,19 @@ public class ProductPage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
     public void clickAddToCart(){
-        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(AddToCartLocator))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(AddToCartLocator)).click();
     }
     public boolean checkProductName(){
-        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(ProductNameLocator))).isDisplayed();
+         return wait.until(ExpectedConditions.visibilityOfElementLocated(ProductNameLocator)).isDisplayed();
     }
     public boolean checkProductimg(){
-        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(Productimg))).isDisplayed();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(Productimg)).isDisplayed();
     }
     public boolean checkProductPrice(){
-        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(ProductPriceLocator))).isDisplayed();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(ProductPriceLocator)).isDisplayed();
     }
     public boolean checkProductDescription(){
-        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(ProductDescriptionLocator))).isDisplayed();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(ProductDescriptionLocator)).isDisplayed();
     }
     public String getAddToCartExpectedMess(){
         return AddToCartExpectedMess;

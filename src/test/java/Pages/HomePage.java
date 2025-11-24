@@ -27,13 +27,13 @@ public class HomePage {
 //    By MonitorsCategoryLocator = By.xpath("//a[contains(@onclick, byCat('monitor'))]");
 //    By NextButtonLocator = By.xpath("//button[text()='Next']");
 //    By PreviousButtonLocator = By.xpath("//button[text()='Previous']");
-      By ProductsLocator = By.className("col-lg-4 col-md-6 mb-4");
+      By ProductsLocator = By.cssSelector(".card.h-100 .hrefch");
     //By imgLocator = By.className("d-block img-fluid");
 
 
     public HomePage(WebDriver driver){
         this.driver = driver;
-        //wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
     public SignUpPage clickOnSignUp(){
@@ -47,6 +47,10 @@ public class HomePage {
     public String getActualWelcomeMess(){
         return  wait.until(ExpectedConditions.visibilityOf(driver.findElement(WelcomeLocator))).getText();
 
+    }
+    public CartPage clickOnCart(){
+        driver.findElement(CartLocator).click();
+        return new CartPage(driver);
     }
 
 //        public ContactPage clickOnContact(){
@@ -82,14 +86,11 @@ public class HomePage {
 //            }
 //
 
-
-    public ProductPage clickOnProduct(int i){
-        List<WebElement> Products = driver.findElements(ProductsLocator);
-        Products.get(i).click();
-        return new ProductPage(driver);
-    }
-//    public boolean imgIsDisplayed(){
-//        return driver.findElement(imgLocator).isDisplayed();
-//    }
+        public ProductPage clickOnProduct(int i){
+            wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ProductsLocator));//*
+            List<WebElement> products = driver.findElements(ProductsLocator);
+            products.get(i).click();
+            return new ProductPage(driver);
+        }
 
 }

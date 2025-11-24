@@ -26,10 +26,10 @@ public class SignUpPage {
     }
 
     public void setUsername(String username){
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(UsernameLocator))).sendKeys(username);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(UsernameLocator)).sendKeys(username);
     }
     public void setPassword(String password){
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(PasswordLocator))).sendKeys(password);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(PasswordLocator)).sendKeys(password);
     }
     public void clickOnClose(){
         wait.until(ExpectedConditions.elementToBeClickable(CloseButtonLocator)).click();
@@ -51,6 +51,7 @@ public class SignUpPage {
         Alert alert = driver.switchTo().alert();
         alert.accept();
     }
+
     public String getActualMess(){
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
