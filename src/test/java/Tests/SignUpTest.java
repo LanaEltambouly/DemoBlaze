@@ -57,9 +57,8 @@ public class SignUpTest extends BaseTestClass{
     @Test
     public void verifyCloseButtonSignUp(){
         signuppage = homepage.clickOnSignUp();
-        signuppage.setPassword("11111");
         signuppage.clickOnClose();
-        //?
+        Assert.assertTrue(homepage.checkSignUp());
 
     }
 

@@ -1,0 +1,22 @@
+package Tests;
+
+import BaseTests.BaseTestClass;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class AboutUsTest extends BaseTestClass {
+
+    @Test(priority = 0)
+    public void verifyVideoIsDisplayedWhenClickAboutUs(){
+       aboutUsPage = homepage.clickOnAboutUs();
+       Assert.assertTrue(aboutUsPage.videoIsDisplayed());
+    }
+
+    @Test
+    public void verifyCloseButtonOnAboutUsPage(){
+        aboutUsPage = homepage.clickOnAboutUs();
+        aboutUsPage.clickOnCloseButton();
+        Assert.assertTrue(homepage.checkImages());
+    }
+
+}

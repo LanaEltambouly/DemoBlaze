@@ -5,7 +5,7 @@ import Pages.PlaceOrderPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PlaceOrderTest extends BaseTestClass {
+public class  PlaceOrderTest extends BaseTestClass {
 
     @Test
     public void verifyPlaceOrderWithValidCredentials(){

@@ -1,5 +1,9 @@
 package Pages;
 
+import Pages.Categories.CategoriesPage;
+import Pages.Categories.LaptopsCatPage;
+import Pages.Categories.MonitorsCatPage;
+import Pages.Categories.PhonesCatPage;
 import Pages.OtherPages.NextPage;
 import Pages.OtherPages.PreviousPage;
 import org.openqa.selenium.By;
@@ -28,7 +32,7 @@ public class HomePage {
     By ProductsLocator = By.cssSelector(".card.h-100 .hrefch");
     By NextButtonLocator = By.xpath("//button[text()='Next']");
     By PreviousButtonLocator = By.xpath("//button[text()='Previous']");
-    //By imgLocator = By.className("d-block img-fluid");
+    By imgLocator = By.xpath("//img[contains(@class,'d-block')]");
 
 
     public HomePage(WebDriver driver){
@@ -45,7 +49,7 @@ public class HomePage {
         return new LogInPage(driver);
     }
     public String getActualWelcomeMess(){
-        return  wait.until(ExpectedConditions.visibilityOf(driver.findElement(WelcomeLocator))).getText();
+        return  wait.until(ExpectedConditions.visibilityOfElementLocated(WelcomeLocator)).getText();
 
     }
     public CartPage clickOnCart(){
@@ -64,7 +68,7 @@ public class HomePage {
     }
 
     public void ClickOnLogout(){
-        driver.findElement(LogOutLocator).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LogOutLocator)).click();
     }
 
 
@@ -74,17 +78,21 @@ public class HomePage {
         products.get(i).click();
         return new ProductPage(driver);
     }
-        public void ClickOnCategories(){
+    public CategoriesPage ClickOnCategories(){
             driver.findElement(CategoriesLocator).click();
+            return new CategoriesPage(driver);
         }
-        public void ClickOnPhonesCat(){
+        public PhonesCatPage ClickOnPhonesCat(){
             driver.findElement(PhonesCategoryLocator).click();
+            return new PhonesCatPage(driver);
         }
-        public void ClickOnLaptopsCat(){
+        public LaptopsCatPage ClickOnLaptopsCat(){
             driver.findElement(LaptopsCategoryLocator).click();
+            return new LaptopsCatPage(driver);
         }
-        public void ClickOnMonitorsCat(){
+        public MonitorsCatPage ClickOnMonitorsCat(){
             driver.findElement(MonitorsCategoryLocator).click();
+            return new MonitorsCatPage(driver);
         }
         public NextPage ClickOnNextButton(){
             driver.findElement(NextButtonLocator).click();
@@ -94,6 +102,21 @@ public class HomePage {
             driver.findElement(PreviousButtonLocator).click();
             return new PreviousPage(driver);
         }
+
+    public boolean checkLogin(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(LogInLocator)).isDisplayed();
+    }
+    public boolean checkLogout(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(LogOutLocator)).isDisplayed();
+    }
+    public boolean checkSignUp(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(SignUpLocator)).isDisplayed();
+    }
+    public boolean checkImages(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(imgLocator)).isDisplayed();
+    }
+
+
 
 
 

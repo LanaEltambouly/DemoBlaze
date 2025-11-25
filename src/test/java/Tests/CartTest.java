@@ -12,90 +12,73 @@ public class CartTest extends BaseTestClass {
     }
 
 
-    @Test
+    @Test(priority = 1)
     public void verifyMultipleProductsAddedToCartSuccessfully(){
         ProductToCartScenario(1);
         productPage.clickOnHome();
-
         ProductToCartScenario(6);
-        cartPage = productPage.clickOnCart();
-
-        Assert.assertTrue(cartPage.displayedImage());
-        Assert.assertTrue(cartPage.checkTitles());
-        Assert.assertTrue(cartPage.checkPrices());
-        Assert.assertTrue(cartPage.checkTotalPrice());
-        Assert.assertEquals(cartPage.getActualTotalProductPrice(), 2);
-    }
-
-    @Test
-    public void verifyCorrectTotalPrice(){
+        productPage.clickOnHome();
         ProductToCartScenario(2);
         productPage.clickOnHome();
         ProductToCartScenario(2);
         productPage.clickOnHome();
         ProductToCartScenario(4);
+        cartPage = productPage.clickOnCart();
 
+        Assert.assertTrue(cartPage.displayedImage());
+        Assert.assertTrue(cartPage.checkPrices());
+        Assert.assertTrue(cartPage.checkTitles());
+        Assert.assertTrue(cartPage.checkTotalPrice());
+        Assert.assertEquals(cartPage.getProductsListSize(), 5);
+    }
+
+
+    @Test(priority = 2)
+    public void verifyCorrectTotalPrice(){
         cartPage = productPage.clickOnCart();
 
         Assert.assertEquals(cartPage.getActualTotalProductPrice(), cartPage.getFoundTotalPrice());
     }
 
 
-    @Test
+    @Test(priority = 4)
     public void verifyPlaceOrderFromCart(){
-        ProductToCartScenario(5);
-        productPage.clickOnHome();
-
-        ProductToCartScenario(6);
         cartPage = productPage.clickOnCart();
         placeOrderPage = cartPage.ClickOnPlaceOrder();
         Assert.assertEquals(placeOrderPage.getActualPlaceOrderStatement(), placeOrderPage.getExpectedPlaceOrderStatement());
     }
 
-    @Test
+    @Test(priority = 3)
     public void verifyDeleteFromCart(){
-        ProductToCartScenario(7);
-        productPage.clickOnHome();
-
-        ProductToCartScenario(8);
-        productPage.clickOnHome();
-
         cartPage = productPage.clickOnCart();
         cartPage.ClickOnDelete(0);
-        Assert.assertEquals(cartPage.getProductsListSize(), 1);
-
+        Assert.assertEquals(cartPage.getProductsListSize(), 4);
     }
-    @Test
+
+    @Test(priority = 0)
     public void verifyEmptyCartDisplaysNothing(){
         cartPage = homepage.clickOnCart();
         Assert.assertEquals(cartPage.getProductsListSize(), 0);
     }
 
-    @Test
+    @Test(priority = 6)
     public void verifyEmptyCartDisablePlaceOrder(){
         cartPage = homepage.clickOnCart();
         Assert.assertEquals(cartPage.getProductsListSize(), 0);
-        Assert.assertTrue(cartPage.PlaceOrderButtonDisability());
+        Assert.assertTrue(cartPage.PlaceOrderButtonDisability());  //    BUUUUUUUUUUUGGGGGGG
     }
 
-    @Test
+    @Test(priority = 5)
     public void verifyDeletingAllProducts(){
-        ProductToCartScenario(7);
-        productPage.clickOnHome();
-
-        ProductToCartScenario(8);
-        productPage.clickOnHome();
-
-        ProductToCartScenario(5);
-        productPage.clickOnHome();
-
         cartPage = productPage.clickOnCart();
         cartPage.ClickOnDelete(0);
         cartPage.ClickOnDelete(1);
         cartPage.ClickOnDelete(2);
+        cartPage.ClickOnDelete(3);
+
 
         Assert.assertEquals(cartPage.getProductsListSize(), 0);
-        Assert.assertTrue(cartPage.PlaceOrderButtonDisability());
+        Assert.assertTrue(cartPage.PlaceOrderButtonDisability());   //    BUUUUUUUUUUUGGGGGGG
 
     }
 

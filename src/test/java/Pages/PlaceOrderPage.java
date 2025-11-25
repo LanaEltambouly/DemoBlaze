@@ -21,7 +21,7 @@ public class PlaceOrderPage {
     By okButtonLocator = By.xpath("//button[text()='OK']");
     By closeButtonLocator = By.xpath("//button[text()='Close']");
     By TotalLocator = By.id("totalm");
-    By ActualPurchaseMessageLocator = By.xpath("//div[@class='sweet-alert']/h2");
+    By ActualPurchaseMessageLocator = By.xpath("//div[contains(@class,'sweet-alert')]/h2");
     String expectedSuccessfulResult = "Thank you for your purchase!";
     String expectedMissingInfoResult = "Please fill out Name and Creditcard.";
     By placeOrderStatementLocator = By.id("orderModalLabel");
@@ -87,6 +87,10 @@ public class PlaceOrderPage {
     public String getExpectedResult() {
         return expectedSuccessfulResult;
     }
+    public String getExpectedMissingInfoResult(){
+        return expectedMissingInfoResult;
+    }
+
 
 
     public String getExpectedPlaceOrderStatement() {

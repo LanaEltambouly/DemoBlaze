@@ -9,16 +9,17 @@ import org.testng.annotations.Test;
 
 public class LogInTest extends BaseTestClass {
 
-    @Test
+    @Test(priority = 4)
     public void verifyLoginWithValidCredentials(){
         loginPage = homepage.clickOnLogIn();
         loginPage.setUsername("teamone1");
         loginPage.setPassword("1234");
         loginPage.clickOnLogIn();
         Assert.assertTrue(homepage.getActualWelcomeMess().contains("Welcome"));
+        Assert.assertTrue(homepage.checkLogout());
 
     }
-    @Test
+    @Test(priority = 0)
     public void verifyLoginWithInvalidCredentials(){
         loginPage = homepage.clickOnLogIn();
         loginPage.setUsername("teammmm");
@@ -28,7 +29,7 @@ public class LogInTest extends BaseTestClass {
         loginPage.clickOnOk();
 
     }
-    @Test
+    @Test(priority = 1)
     public void verifyLoginWithWrongUsername(){
         loginPage = homepage.clickOnLogIn();
         loginPage.setUsername("teammm");
@@ -38,7 +39,7 @@ public class LogInTest extends BaseTestClass {
         loginPage.clickOnOk();
 
     }
-    @Test
+    @Test(priority = 2)
     public void verifyLoginWithWrongPassword(){
         loginPage = homepage.clickOnLogIn();
         loginPage.setUsername("teamone1");
@@ -48,18 +49,18 @@ public class LogInTest extends BaseTestClass {
         loginPage.clickOnOk();
 
     }
-    @Test
+    @Test(priority = 3)
     public void verifyLoginWithEmptyFields(){
         loginPage = homepage.clickOnLogIn();
         loginPage.clickOnLogIn();
         Assert.assertEquals(loginPage.getActualMess(),loginPage.getExpectedAnyEmptyFieldMess());
         loginPage.clickOnOk();
-
-
     }
-    @Test
+
+    @Test(priority = 5)
     public void verifyLogOut(){
         homepage.ClickOnLogout();
+        Assert.assertTrue(homepage.checkLogin());
 
 
     }
