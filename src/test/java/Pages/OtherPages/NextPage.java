@@ -9,5 +9,7 @@ public class NextPage extends HomePage {
     public NextPage(WebDriver driver){
         super(driver);
         this.driver = driver;
+
+
     }
 }

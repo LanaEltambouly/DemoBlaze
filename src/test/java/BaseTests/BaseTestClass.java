@@ -1,12 +1,6 @@
 package BaseTests;
 
 import Pages.*;
-import Pages.Categories.CategoriesPage;
-import Pages.Categories.LaptopsCatPage;
-import Pages.Categories.MonitorsCatPage;
-import Pages.Categories.PhonesCatPage;
-import Pages.OtherPages.NextPage;
-import Pages.OtherPages.PreviousPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -28,14 +22,6 @@ public class BaseTestClass {
     protected CartPage cartPage;
     protected ProductPage productPage;
     protected PlaceOrderPage placeOrderPage;
-    protected AboutUsPage aboutUsPage;
-    protected ContactPage contactPage;
-    protected CategoriesPage categoriesPage;
-    protected LaptopsCatPage laptopsCatPage;
-    protected PhonesCatPage phonesCatPage;
-    protected MonitorsCatPage monitorsCatPage;
-    protected NextPage nextPage;
-    protected PreviousPage previousPage;
 
 
     @BeforeClass
