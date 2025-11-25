@@ -22,6 +22,7 @@ public class BaseTestClass {
     protected CartPage cartPage;
     protected ProductPage productPage;
     protected PlaceOrderPage placeOrderPage;
+    protected ContactPage contactPage;
 
 
     @BeforeClass
