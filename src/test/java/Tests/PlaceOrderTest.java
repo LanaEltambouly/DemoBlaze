@@ -39,11 +39,11 @@ public class  PlaceOrderTest extends BaseTestClass {
         placeOrderPage.enterMonth("");
         placeOrderPage.enterYear("");
         placeOrderPage.clickPurchase();
-        Assert.assertTrue(placeOrderPage.getActualMissingInfoResult().contains("Please enter data in empty fields"));
+        Assert.assertTrue(placeOrderPage.getActualMissingInfoResult().contains(placeOrderPage.getExpectedMissingInfoResult()));
         placeOrderPage.clickOnOk();
     }
     @Test
-    public void verifyPlaceOrderWithWrongSyntax(){
+    public void verifyPlaceOrderWithWrongSyntax(){       // BUUUUUGGG
         productPage= homepage.clickOnProduct(1);
         productPage.clickAddToCart();
         productPage.clickOnOk();
@@ -61,7 +61,7 @@ public class  PlaceOrderTest extends BaseTestClass {
 
     }
     @Test
-    public void verifyPlaceOrderWithMissingFields(){
+    public void verifyPlaceOrderWithMissingFields(){  // BUUUUUGGGGGGG
         productPage= homepage.clickOnProduct(1);
         productPage.clickAddToCart();
         productPage.clickOnOk();
