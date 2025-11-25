@@ -57,5 +57,11 @@ public class LogInTest extends BaseTestClass {
 
 
     }
+    @Test
+    public void verifyLogOut(){
+        homepage.ClickOnLogout();
+
+
+    }
 
 }

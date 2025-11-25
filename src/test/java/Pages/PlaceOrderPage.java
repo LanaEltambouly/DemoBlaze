@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,15 +21,18 @@ public class PlaceOrderPage {
     By okButtonLocator = By.xpath("//button[text()='OK']");
     By closeButtonLocator = By.xpath("//button[text()='Close']");
     By TotalLocator = By.id("totalm");
-    By ActualPurchaseMessageLocator =  By.xpath("//div[@class='sweet-alert']/h2"); ;
-    String expectedSuccessfulResult= "Thank you for your purchase!" ;
-    String expectedMissingInfoResult= "Please fill out Name and Creditcard." ;
+    By ActualPurchaseMessageLocator = By.xpath("//div[@class='sweet-alert']/h2");
+    String expectedSuccessfulResult = "Thank you for your purchase!";
+    String expectedMissingInfoResult = "Please fill out Name and Creditcard.";
     By placeOrderStatementLocator = By.id("orderModalLabel");
     String expectedPlaceOrderStatement = "Place order";
+
+
 
     public PlaceOrderPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(placeOrderStatementLocator));
     }
 
     public void enterName(String name) {
@@ -46,6 +50,7 @@ public class PlaceOrderPage {
     public void enterCard(String card) {
         driver.findElement(CreditCard).sendKeys(card);
     }
+
     public void enterMonth(String month) {
         driver.findElement(Month).sendKeys(month);
     }
@@ -71,25 +76,38 @@ public class PlaceOrderPage {
     }
 
 
-    public String getTotal(){
-        return wait.until(ExpectedConditions.visibilityOf(driver. findElement(TotalLocator))).getText();
-    }
-    public String getActualPurchaseMessage(){
-        return wait.until(ExpectedConditions.visibilityOf(driver. findElement(ActualPurchaseMessageLocator))).getText();
+    public String getTotal() {
+        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(TotalLocator))).getText();
     }
 
-    public String getExpectedResult(){
-        return expectedSuccessfulResult ;
-    }
-    public String getExpectedMissingInfoResult(){
-        return expectedMissingInfoResult;
+    public String getActualPurchaseMessage() {
+        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(ActualPurchaseMessageLocator))).getText();
     }
 
-    public String getExpectedPlaceOrderStatement(){
+    public String getExpectedResult() {
+        return expectedSuccessfulResult;
+    }
+
+
+    public String getExpectedPlaceOrderStatement() {
         return expectedPlaceOrderStatement;
     }
-    public String getActualPlaceOrderStatement(){
+
+    public String getActualPlaceOrderStatement() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(placeOrderStatementLocator)).getText();
     }
 
+
+    public void clickOnOk() {
+        wait.until(ExpectedConditions.alertIsPresent());
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+    }
+
+    public String getActualMissingInfoResult() {
+        wait.until(ExpectedConditions.alertIsPresent());
+        Alert alert = driver.switchTo().alert();
+        return alert.getText();
+
+    }
 }

@@ -52,9 +52,9 @@ public class CartPage {
     }
 
 
-    public Double getActualTotalProductPrice() {
+    public double getActualTotalProductPrice() {
         List<WebElement> priceElements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(PriceLocator));
-        Double sum = 0.0;
+        double sum = 0.0;
         for (WebElement priceElement : priceElements) {
             sum += Double.parseDouble(priceElement.getText());
         }
@@ -80,6 +80,15 @@ public class CartPage {
             if(!p.isDisplayed()) return false;
         }
         return true;
+    }
+
+    public int getProductsListSize(){
+        products = driver.findElements(TitleLocator);
+        return products.size();
+    }
+
+    public boolean PlaceOrderButtonDisability(){
+        return !driver.findElement(PlaceOrderButtonLocator).isEnabled();
     }
 
 
