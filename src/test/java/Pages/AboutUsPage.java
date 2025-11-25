@@ -2,10 +2,10 @@ package Pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class ContactPage {
+public class AboutUsPage {
     WebDriver driver;
 
-    public ContactPage(WebDriver driver){
+    public AboutUsPage(WebDriver driver){
         this.driver = driver;
     }
 }

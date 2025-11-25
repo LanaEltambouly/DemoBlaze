@@ -26,8 +26,8 @@ public class HomePage {
     By LaptopsCategoryLocator = By.xpath("//a[contains(@onclick, byCat('notebook'))]");
     By MonitorsCategoryLocator = By.xpath("//a[contains(@onclick, byCat('monitor'))]");
     By ProductsLocator = By.cssSelector(".card.h-100 .hrefch");
-    //    By NextButtonLocator = By.xpath("//button[text()='Next']");
-//    By PreviousButtonLocator = By.xpath("//button[text()='Previous']");
+    By NextButtonLocator = By.xpath("//button[text()='Next']");
+    By PreviousButtonLocator = By.xpath("//button[text()='Previous']");
     //By imgLocator = By.className("d-block img-fluid");
 
 
@@ -56,6 +56,11 @@ public class HomePage {
     public ContactPage clickOnContact(){
         driver.findElement(ContactLocator).click();
         return new ContactPage(driver);
+    }
+
+    public AboutUsPage clickOnAboutUs(){
+        driver.findElement(AboutUsLocator).click();
+        return new AboutUsPage(driver);
     }
 
     public void ClickOnLogout(){
