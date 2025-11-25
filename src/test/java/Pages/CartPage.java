@@ -13,14 +13,12 @@ import java.util.List;
 public class CartPage {
     WebDriver driver;
     WebDriverWait wait ;
-    By placeOrderStatementLocator = By.id("orderModalLabel");
-    String expectedPlaceOrderStatement = "Place order";
     By PlaceOrderButtonLocator = By.xpath("//button[text()='Place Order']");
     By DeleteLocator = By.linkText("Delete") ;
-    By actualTitleLocator = By.xpath("//table[@class='table table-bordered table-hover table-striped']//td[2]");
-    By actualPriceLocator = By.xpath("//table[@class='table table-bordered table-hover table-striped']//td[3]");
+    By TitleLocator = By.xpath("//table[@class='table table-bordered table-hover table-striped']//td[2]");
+    By PriceLocator = By.xpath("//table[@class='table table-bordered table-hover table-striped']//td[3]");
     By imageLocator = By.xpath("//table[@class='table table-bordered table-hover table-striped']//img");
-    By actualTotalPriceLocator = By.id("totalp");
+    By TotalPriceLocator = By.id("totalp");
     List<WebElement> products;
 
     public CartPage(WebDriver driver){
@@ -39,45 +37,51 @@ public class CartPage {
             products.get(i).click();
     }
 
-    public boolean checkTitle(int i){
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(actualTitleLocator));
-        products = driver.findElements(actualTitleLocator);
-        return products.get(i).isDisplayed();
-    }
-    public boolean checkPrice(int i){
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(actualPriceLocator));
-         products = driver.findElements(actualPriceLocator);
-        return products.get(i).isDisplayed();
-    }
-    public boolean checkTotalPrice(int i){
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(actualTotalPriceLocator));
-        products = driver.findElements(actualTotalPriceLocator);
-        return products.get(i).isDisplayed();
+
+    public boolean checkTotalPrice(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(TotalPriceLocator)).isDisplayed();
     }
 
-
-    public boolean displayedImage(int i){
+    public boolean displayedImage(){
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(imageLocator));
         products = driver.findElements(imageLocator);
-        return products.get(i).isDisplayed();
-    }
-    public String getExpectedPlaceOrderStatement(){
-        return expectedPlaceOrderStatement;
-    }
-    public String getActualPlaceOrderStatement(){
-        return driver.findElement(placeOrderStatementLocator).getText();
+        for (WebElement p : products){
+        if(!p.isDisplayed()) return false;
+        }
+        return true;
     }
 
-//    public Double getProductPrice(){
-//        return Double.parseDouble(wait.until(ExpectedConditions.visibilityOfElementLocated(actualPriceLocator)).getText());
-//    }
 
-//    public String getTitle(){
-//        return wait.until(ExpectedConditions.visibilityOfElementLocated(actualTitleLocator)).getText();
-//    }
-//    public Double getTotalPrice(){
-//        return Double.parseDouble(wait.until(ExpectedConditions.visibilityOfElementLocated(actualTotalPriceLocator)).getText());
-//    }
+    public Double getActualTotalProductPrice() {
+        List<WebElement> priceElements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(PriceLocator));
+        Double sum = 0.0;
+        for (WebElement priceElement : priceElements) {
+            sum += Double.parseDouble(priceElement.getText());
+        }
+        return sum;
+    }
+
+
+    public boolean checkTitles(){
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(TitleLocator));
+        products = driver.findElements(TitleLocator);
+        for (WebElement p : products){
+            if(!p.isDisplayed()) return false;
+        }
+        return true;
+    }
+    public Double getFoundTotalPrice(){
+        return Double.parseDouble(wait.until(ExpectedConditions.visibilityOfElementLocated(TotalPriceLocator)).getText());
+    }
+    public boolean checkPrices(){
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(PriceLocator));
+        products = driver.findElements(PriceLocator);
+        for (WebElement p : products){
+            if(!p.isDisplayed()) return false;
+        }
+        return true;
+    }
+
 
 
 }

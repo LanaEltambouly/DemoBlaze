@@ -20,6 +20,5 @@ public class ProductTest extends BaseTestClass {
         productPage.clickAddToCart();
         Assert.assertEquals(productPage.getActualMess(),productPage.getAddToCartExpectedMess());
         productPage.clickOnOk();
-
     }
 }

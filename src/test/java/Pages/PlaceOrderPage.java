@@ -23,7 +23,8 @@ public class PlaceOrderPage {
     By ActualPurchaseMessageLocator =  By.xpath("//div[@class='sweet-alert']/h2"); ;
     String expectedSuccessfulResult= "Thank you for your purchase!" ;
     String expectedMissingInfoResult= "Please fill out Name and Creditcard." ;
-
+    By placeOrderStatementLocator = By.id("orderModalLabel");
+    String expectedPlaceOrderStatement = "Place order";
 
     public PlaceOrderPage(WebDriver driver) {
         this.driver = driver;
@@ -82,6 +83,13 @@ public class PlaceOrderPage {
     }
     public String getExpectedMissingInfoResult(){
         return expectedMissingInfoResult;
+    }
+
+    public String getExpectedPlaceOrderStatement(){
+        return expectedPlaceOrderStatement;
+    }
+    public String getActualPlaceOrderStatement(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(placeOrderStatementLocator)).getText();
     }
 
 }

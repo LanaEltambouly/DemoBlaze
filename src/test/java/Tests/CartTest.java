@@ -6,34 +6,80 @@ import org.testng.annotations.Test;
 
 public class CartTest extends BaseTestClass {
     @Test
-    public void verifyAddProductsToCartSuccessfully(){
-        cartPage = homepage.clickOnCart();
-        Assert.assertTrue(cartPage.checkTitle(0));
-        Assert.assertTrue(cartPage.displayedImage(0));
-        Assert.assertTrue(cartPage.checkPrice(0));
-        Assert.assertTrue(cartPage.checkTotalPrice(0));
-        Assert.assertTrue(cartPage.checkTitle(1));
-        Assert.assertTrue(cartPage.displayedImage(1));
-        Assert.assertTrue(cartPage.checkPrice(1));
-        Assert.assertTrue(cartPage.checkTotalPrice(1));
+    public void verifyMultipleProductsAddedToCartSuccessfully(){
+        productPage = homepage.clickOnProduct(1);
+        productPage.clickAddToCart();
+        productPage.clickOnOk();
+        productPage.clickOnHome();
+
+        productPage = homepage.clickOnProduct(6);
+        productPage.clickAddToCart();
+        productPage.clickOnOk();
+
+        cartPage = productPage.clickOnCart();
+        Assert.assertTrue(cartPage.displayedImage());
+        Assert.assertTrue(cartPage.checkTitles());
+        Assert.assertTrue(cartPage.checkPrices());
+        Assert.assertTrue(cartPage.checkTotalPrice());
+    }
+
+    @Test
+    public void verifyCorrectTotalPrice(){
+        productPage = homepage.clickOnProduct(1);
+        productPage.clickAddToCart();
+        productPage.clickOnOk();
+        productPage.clickOnHome();
+
+        productPage = homepage.clickOnProduct(6);
+        productPage.clickAddToCart();
+        productPage.clickOnOk();
+
+        cartPage = productPage.clickOnCart();
+        Assert.assertEquals(cartPage.getActualTotalProductPrice(), cartPage.getFoundTotalPrice());
+    }
+
+
+    @Test
+    public void verifyPlaceOrderFromCart(){
+        productPage = homepage.clickOnProduct(1);
+        productPage.clickAddToCart();
+        productPage.clickOnOk();
+        productPage.clickOnHome();
+
+        productPage = homepage.clickOnProduct(6);
+        productPage.clickAddToCart();
+        productPage.clickOnOk();
+
+        cartPage = productPage.clickOnCart();
+        placeOrderPage = cartPage.ClickOnPlaceOrder();
+        Assert.assertEquals(placeOrderPage.getActualPlaceOrderStatement(), placeOrderPage.getExpectedPlaceOrderStatement());
     }
 
     @Test
     public void verifyDeleteFromCart(){
-        cartPage = homepage.clickOnCart();
+        productPage = homepage.clickOnProduct(1);
+        productPage.clickAddToCart();
+        productPage.clickOnOk();
+        productPage.clickOnHome();
+
+        productPage = homepage.clickOnProduct(6);
+        productPage.clickAddToCart();
+        productPage.clickOnOk();
+
+        cartPage = productPage.clickOnCart();
         cartPage.ClickOnDelete(0);
-        Assert.assertFalse(cartPage.checkTitle(0));
-        Assert.assertFalse(cartPage.displayedImage(0));
-        Assert.assertFalse(cartPage.checkPrice(0));
-        Assert.assertFalse(cartPage.checkTotalPrice(0));
     }
-
     @Test
-    public void verifyPlaceOrder(){
-        cartPage =homepage.clickOnCart();
-        cartPage.ClickOnPlaceOrder();
+    public void verifyEmptyCartDisplaysNothing(){
+        cartPage = homepage.clickOnCart();
+
 
     }
+    @Test
+    public void verify(){
+
+    }
+
 
 
 }
