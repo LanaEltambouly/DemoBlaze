@@ -69,9 +69,9 @@ public class HomePage {
         products.get(i).click();
         return new ProductPage(driver);
     }
-//        public void ClickOnCategories(){
-//            driver.findElement().click();
-//        }
+        public void ClickOnCategories(){
+            driver.findElement(CategoriesLocator).click();
+        }
         public void ClickOnPhonesCat(){
             driver.findElement(PhonesCategoryLocator).click();
         }
