@@ -36,8 +36,8 @@ public class BaseTestClass {
 
     @BeforeClass
     public void setUp(){
-       // driver = new FirefoxDriver();
-        driver = new ChromeDriver() ;
+        driver = new FirefoxDriver();
+        //driver = new ChromeDriver() ;
         homepage = new HomePage(driver);
         wait = new WebDriverWait(driver,Duration.ofSeconds(15));
 

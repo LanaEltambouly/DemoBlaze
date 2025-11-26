@@ -1,43 +1,36 @@
 package Tests;
 
 import BaseTests.BaseTestClass;
-
-import Pages.Categories.CategoriesPage;
-import Pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import Pages.Categories.PhonesCatPage ;
-import Pages.Categories.LaptopsCatPage;
-import Pages.Categories.LaptopsCatPage ;
-
 
 
 public class CategoriesTest extends BaseTestClass {
 
-    @Test(priority = 0)
-    public void verifyAllphones() {
-
-
-
-        homepage.ClickOnPhonesCat();
-        Assert.assertTrue(categoriesPage.getProducts().containsAll(phonesCatPage.expectedPhones));
+    @Test
+    public void verifyOnlyPhonesAreDisplayedWhenClickOnPhones() {
+        phonesCatPage = homepage.ClickOnPhonesCat();
+        Assert.assertTrue(phonesCatPage.getProducts().containsAll(phonesCatPage.expectedPhones));
 
     }
-    @Test(priority = 1)
-    public void verifyalllaptops() {
 
 
-        homepage.ClickOnLaptopsCat();
-        Assert.assertTrue(categoriesPage.getProducts().containsAll(laptopsCatPage.expectedLaptops));
-
-
+    @Test
+    public void verifyOnlyLaptopsAreDisplayedWhenClickOnLaptops() {
+        laptopsCatPage = homepage.ClickOnLaptopsCat();
+        Assert.assertTrue(laptopsCatPage.getProducts().containsAll(laptopsCatPage.expectedLaptops));
     }
-    @Test(priority = 2)
-    public void verifyMonitors(){
 
+    @Test
+    public void verifyOnlyMonitorsAreDisplayedWhenClickOnMonitors(){
 
-        homepage.ClickOnMonitorsCat();
+        monitorsCatPage = homepage.ClickOnMonitorsCat();
+        Assert.assertTrue(monitorsCatPage.getProducts().containsAll(monitorsCatPage.expectedMonitors));
+    }
 
-        Assert.assertTrue(categoriesPage.getProducts().containsAll(monitorsCatPage.expectedMonitors));
+    @Test(priority = 3)
+    public void verifyAllProductsAreDisplayedWhenClickOnCategories() {
+        categoriesPage = homepage.ClickOnCategories();
+        Assert.assertTrue(categoriesPage.expectedAllProducts.containsAll(categoriesPage.getProducts()));
     }
 }

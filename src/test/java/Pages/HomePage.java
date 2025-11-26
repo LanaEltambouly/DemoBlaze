@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomePage {
@@ -36,6 +37,9 @@ public class HomePage {
     By PreviousButtonLocator = By.xpath("//button[text()='Previous']");
     By imgLocator = By.xpath("//img[contains(@class,'d-block')]");
 
+
+    By productsTitles = By.cssSelector(".card-title a");
+    List<WebElement> products;
 
     public HomePage(WebDriver driver){
         this.driver = driver;
@@ -118,7 +122,14 @@ public class HomePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(imgLocator)).isDisplayed();
     }
 
-
+    public List<String> getProducts() {
+        List<String> productNames = new ArrayList<>();
+        products = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(productsTitles));
+        for (WebElement product : products) {
+            productNames.add(product.getText());
+        }
+        return productNames;
+    }
 
 
 

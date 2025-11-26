@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class ContactPage {
     WebDriver driver;
     WebDriverWait wait;
@@ -22,9 +24,9 @@ public class ContactPage {
 
     public ContactPage(WebDriver driver){
         this.driver = driver;
-        wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(15));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
-public void setContactEmail(String email){
+   public void setContactEmail(String email){
         wait.until(ExpectedConditions.visibilityOfElementLocated(contactEmailLocator)).sendKeys(email);
     }
 

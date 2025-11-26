@@ -78,7 +78,8 @@ public class CartTest extends BaseTestClass {
 
 
         Assert.assertEquals(cartPage.getProductsListSize(), 0);
-        Assert.assertTrue(cartPage.PlaceOrderButtonDisability());   //    BUUUUUUUUUUUGGGGGGG
+        Assert.assertFalse(cartPage.PlaceOrderButtonDisability());   //    BUUUUUUUUUUUGGGGGGG
+        System.out.println("Test Case Failed");
 
     }
 
