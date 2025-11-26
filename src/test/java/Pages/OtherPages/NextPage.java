@@ -10,6 +10,7 @@ public class NextPage extends HomePage {
         super(driver);
         this.driver = driver;
 
-
     }
+
+
 }

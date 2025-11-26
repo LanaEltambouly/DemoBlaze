@@ -26,9 +26,11 @@ public class HomePage {
     By AboutUsLocator = By.xpath("//a[contains(@data-target, '#videoModal')]");
     By ContactLocator = By.xpath("//a[contains(@data-target,'#exampleModal')]");
     By CategoriesLocator = By.id("cat");
-    By PhonesCategoryLocator = By.xpath("//a[contains(@onclick, byCat('phone'))]");
-    By LaptopsCategoryLocator = By.xpath("//a[contains(@onclick, byCat('notebook'))]");
-    By MonitorsCategoryLocator = By.xpath("//a[contains(@onclick, byCat('monitor'))]");
+
+    By categoryPhonesLocator = By.xpath("//a[text()='Phones']");
+    By categoryLaptopsLocator = By.xpath("//a[text()='Laptops']");
+    By categoryMonitorsLocator = By.xpath("//a[text()='Monitors']");
+
     By ProductsLocator = By.cssSelector(".card.h-100 .hrefch");
     By NextButtonLocator = By.xpath("//button[text()='Next']");
     By PreviousButtonLocator = By.xpath("//button[text()='Previous']");
@@ -83,15 +85,15 @@ public class HomePage {
             return new CategoriesPage(driver);
         }
         public PhonesCatPage ClickOnPhonesCat(){
-            driver.findElement(PhonesCategoryLocator).click();
+            driver.findElement(categoryPhonesLocator).click();
             return new PhonesCatPage(driver);
         }
         public LaptopsCatPage ClickOnLaptopsCat(){
-            driver.findElement(LaptopsCategoryLocator).click();
+            driver.findElement(categoryLaptopsLocator).click();
             return new LaptopsCatPage(driver);
         }
         public MonitorsCatPage ClickOnMonitorsCat(){
-            driver.findElement(MonitorsCategoryLocator).click();
+            driver.findElement(categoryMonitorsLocator).click();
             return new MonitorsCatPage(driver);
         }
         public NextPage ClickOnNextButton(){

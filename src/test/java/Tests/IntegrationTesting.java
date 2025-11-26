@@ -1,6 +1,9 @@
 package Tests;
 
 import BaseTests.BaseTestClass;
+import Pages.Categories.LaptopsCatPage;
+import Pages.Categories.MonitorsCatPage;
+import Pages.Categories.PhonesCatPage;
 import org.testng.annotations.Test;
 
 public class IntegrationTesting extends BaseTestClass {
@@ -18,17 +21,17 @@ public class IntegrationTesting extends BaseTestClass {
         loginPage.clickOnLogIn();
 
 
-        phonesCatPage = homepage.ClickOnPhonesCat();
+        PhonesCatPage phonesCatPage = homepage.ClickOnPhonesCat();
         productPage = phonesCatPage.clickOnProduct(1);
         productPage.clickAddToCart();
 
         homepage = productPage.clickOnHome();
-        laptopsCatPage = homepage.ClickOnLaptopsCat();
+        LaptopsCatPage laptopsCatPage = homepage.ClickOnLaptopsCat();
         productPage = laptopsCatPage.clickOnProduct(4);
         productPage.clickAddToCart();
 
         homepage = productPage.clickOnHome();
-        monitorsCatPage = homepage.ClickOnMonitorsCat();
+       MonitorsCatPage monitorsCatPage = homepage.ClickOnMonitorsCat();
         productPage = monitorsCatPage.clickOnProduct(0);
         productPage.clickAddToCart();
 
