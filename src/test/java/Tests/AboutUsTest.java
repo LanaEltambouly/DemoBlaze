@@ -19,8 +19,6 @@ public class AboutUsTest extends BaseTestClass {
         AboutUsPage aboutUsPage = homepage.clickOnAboutUs();
         aboutUsPage.clickOnCloseButton();
 
-        // aboutUsPage = homepage.clickOnAboutUs();
-        //        aboutUsPage.clickOnCloseButton();
         Assert.assertTrue(homepage.checkImages());
     }
 

@@ -17,13 +17,8 @@ public class LaptopsCatPage extends HomePage{
         super(driver);
         this.driver = driver;
     }
-    public List<String> expectedLaptops = Arrays.asList(
-            "Sony vaio i5",
-            "Sony vaio i7",
-            "MacBook air",
-            "Dell i7 8gb",
-            "2017 Dell 15.6 Inch",
-            "MacBook Pro"
-    );
+    public List<String> expectedLaptops = Arrays.asList("Sony vaio i5", "Sony vaio i7",
+            "MacBook air", "Dell i7 8gb", "2017 Dell 15.6 Inch", "MacBook Pro");
+
 }
 
