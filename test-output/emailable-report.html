@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Smoke Tests</th></tr>
+<tr><td><a href="#t0">Positive Scenarios</a></td><td class="num">15</td><td class="num attn">2</td><td class="num">0</td><td class="num attn">12</td><td class="num">129,358</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke Tests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Positive Scenarios &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">Tests.ContactTest</td><td><a href="#m0">goToHomePage</a></td><td rowspan="1">1764189053296</td><td rowspan="1">37</td></tr><tr><th colspan="4">Positive Scenarios &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">Tests.CartTest</td><td><a href="#m1">verifyDeleteFromCart</a></td><td rowspan="1">1764188974583</td><td rowspan="1">7036</td></tr><tr class="failedeven"><td><a href="#m2">verifyDeletingAllProducts</a></td><td rowspan="1">1764188981752</td><td rowspan="1">11044</td></tr><tr class="failedeven"><td><a href="#m3">verifyEmptyCartDisablePlaceOrder</a></td><td rowspan="1">1764188993094</td><td rowspan="1">246</td></tr><tr class="failedeven"><td><a href="#m4">verifyMultipleProductsAddedToCartSuccessfully</a></td><td rowspan="1">1764188993973</td><td rowspan="1">6986</td></tr><tr class="failedodd"><td rowspan="1">Tests.ContactTest</td><td><a href="#m5">verifyContactFormSubmissionWithEmptyNameAndEmail</a></td><td rowspan="1">1764189052326</td><td rowspan="1">968</td></tr><tr class="failedeven"><td rowspan="2">Tests.LogInTest</td><td><a href="#m6">verifyLogOut</a></td><td rowspan="1">1764188950433</td><td rowspan="1">46</td></tr><tr class="failedeven"><td><a href="#m7">verifyLoginWithValidCredentials</a></td><td rowspan="1">1764188953170</td><td rowspan="1">1447</td></tr><tr class="failedodd"><td rowspan="4">Tests.PlaceOrderTest</td><td><a href="#m8">verifyPlaceOrderWithMissingFields</a></td><td rowspan="1">1764189013895</td><td rowspan="1">4107</td></tr><tr class="failedodd"><td><a href="#m9">verifyPlaceOrderWithValidCredentials</a></td><td rowspan="1">1764189018160</td><td rowspan="1">3314</td></tr><tr class="failedodd"><td><a href="#m10">verifyPlaceOrderWithWrongSyntax</a></td><td rowspan="1">1764189021604</td><td rowspan="1">3527</td></tr><tr class="failedodd"><td><a href="#m11">verifyPlaceOrderWithoutAnyCredentials</a></td><td rowspan="1">1764189025603</td><td rowspan="1">3893</td></tr><tr class="failedeven"><td rowspan="1">Tests.SignUpTest</td><td><a href="#m12">verifyValidSignUp</a></td><td rowspan="1">1764188941510</td><td rowspan="1">1586</td></tr><tr><th colspan="4">Positive Scenarios &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">Tests.ContactTest</td><td><a href="#m13">goToHomePage</a></td><td rowspan="1">1764189053339</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m14">tearDown</a></td><td rowspan="1">1764189053339</td><td rowspan="1">0</td></tr><tr><th colspan="4">Positive Scenarios &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">Tests.ContactTest</td><td><a href="#m15">verifyContactFormSubmissionWithErrorEmail</a></td><td rowspan="1">1764189053337</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m16">verifyContactFormSubmissionWithErrorName</a></td><td rowspan="1">1764189053339</td><td rowspan="1">0</td></tr><tr><th colspan="4">Positive Scenarios &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Tests.CartTest</td><td><a href="#m17">verifyCorrectTotalPrice</a></td><td rowspan="1">1764188964548</td><td rowspan="1">9397</td></tr><tr class="passedeven"><td><a href="#m18">verifyEmptyCartDisplaysNothing</a></td><td rowspan="1">1764188993458</td><td rowspan="1">210</td></tr><tr class="passedeven"><td><a href="#m19">verifyPlaceOrderFromCart</a></td><td rowspan="1">1764189001069</td><td rowspan="1">6239</td></tr><tr class="passedodd"><td rowspan="1">Tests.ContactTest</td><td><a href="#m20">verifyContactFormSubmission</a></td><td rowspan="1">1764189050638</td><td rowspan="1">1494</td></tr><tr class="passedeven"><td rowspan="4">Tests.LogInTest</td><td><a href="#m21">verifyLoginWithEmptyFields</a></td><td rowspan="1">1764188950629</td><td rowspan="1">839</td></tr><tr class="passedeven"><td><a href="#m22">verifyLoginWithInvalidCredentials</a></td><td rowspan="1">1764188951592</td><td rowspan="1">1454</td></tr><tr class="passedeven"><td><a href="#m23">verifyLoginWithWrongPassword</a></td><td rowspan="1">1764188954734</td><td rowspan="1">1475</td></tr><tr class="passedeven"><td><a href="#m24">verifyLoginWithWrongUsername</a></td><td rowspan="1">1764188956318</td><td rowspan="1">1440</td></tr><tr class="passedodd"><td rowspan="2">Tests.ProductTest</td><td><a href="#m25">verifyAddToCart</a></td><td rowspan="1">1764189037580</td><td rowspan="1">3644</td></tr><tr class="passedodd"><td><a href="#m26">verifyProductDetailsVisibility</a></td><td rowspan="1">1764189041430</td><td rowspan="1">1676</td></tr><tr class="passedeven"><td rowspan="5">Tests.SignUpTest</td><td><a href="#m27">verifyCloseButtonSignUp</a></td><td rowspan="1">1764188935430</td><td rowspan="1">1065</td></tr><tr class="passedeven"><td><a href="#m28">verifyEmptyPasswordSignUp</a></td><td rowspan="1">1764188936706</td><td rowspan="1">1143</td></tr><tr class="passedeven"><td><a href="#m29">verifyEmptySignUp</a></td><td rowspan="1">1764188937978</td><td rowspan="1">819</td></tr><tr class="passedeven"><td><a href="#m30">verifyEmptyUsernameSignUp</a></td><td rowspan="1">1764188938928</td><td rowspan="1">885</td></tr><tr class="passedeven"><td><a href="#m31">verifyExistingSignUp</a></td><td rowspan="1">1764188939918</td><td rowspan="1">1477</td></tr></tbody>
+</table>
+<h2>Positive Scenarios</h2><h3 id="m0">Tests.ContactTest#goToHomePage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: Unexpected alert dialog detected. Performed handler &quot;dismiss&quot;: Thanks for the message!!
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [06a1dc84-d86c-4b34-9c2f-a420fe3b0cc7, get {url=https://demoblaze.com/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 25964, moz:profile: C:\Users\mohamed\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 06a1dc84-d86c-4b34-9c2f-a420fe3b0cc7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
+	at BaseTests.BaseTestClass.goToHomePage(BaseTestClass.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Tests.CartTest#verifyDeleteFromCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [1] but found [5]
+	at Tests.CartTest.verifyDeleteFromCart(CartTest.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Tests.CartTest#verifyDeletingAllProducts</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at Tests.CartTest.verifyDeletingAllProducts(CartTest.java:98)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Tests.CartTest#verifyEmptyCartDisablePlaceOrder</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at Tests.CartTest.verifyEmptyCartDisablePlaceOrder(CartTest.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Tests.CartTest#verifyMultipleProductsAddedToCartSuccessfully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [2.0] but found [6120.0]
+	at Tests.CartTest.verifyMultipleProductsAddedToCartSuccessfully(CartTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Tests.ContactTest#verifyContactFormSubmissionWithEmptyNameAndEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Please fill out Name and Email.] but found [Thanks for the message!!]
+	at Tests.ContactTest.verifyContactFormSubmissionWithEmptyNameAndEmail(ContactTest.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">Tests.LogInTest#verifyLogOut</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: Element &lt;a id=&quot;logout2&quot; class=&quot;nav-link&quot; href=&quot;#&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a73da95a-431e-4557-8d44-ba0574402dc4, clickElement {id=eddf3285-2705-484b-a48b-75a4ed82d5f0}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 24560, moz:profile: C:\Users\mohamed\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (a73da95a-431e-4557-8d44-ba0574402dc4)] -&gt; id: logout2]
+Session ID: a73da95a-431e-4557-8d44-ba0574402dc4
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at Pages.HomePage.ClickOnLogout(HomePage.java:67)
+	at Tests.LogInTest.verifyLogOut(LogInTest.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">Tests.LogInTest#verifyLoginWithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: The element with the reference fcbe171f-0c35-4834-b679-cbc2e50f37d2 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a73da95a-431e-4557-8d44-ba0574402dc4, isElementDisplayed {id=fcbe171f-0c35-4834-b679-cbc2e50f37d2}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 24560, moz:profile: C:\Users\mohamed\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (a73da95a-431e-4557-8d44-ba0574402dc4)] -&gt; id: nameofuser]
+Session ID: a73da95a-431e-4557-8d44-ba0574402dc4
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at Pages.HomePage.getActualWelcomeMess(HomePage.java:48)
+	at Tests.LogInTest.verifyLoginWithValidCredentials(LogInTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">Tests.PlaceOrderTest#verifyPlaceOrderWithMissingFields</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;sweet-alert&apos;]/h2
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [9f5cc9df-6679-47e8-a246-d0123f3cec5c, findElement {value=//div[@class=&apos;sweet-alert&apos;]/h2, using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 35392, moz:profile: C:\Users\mohamed\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 9f5cc9df-6679-47e8-a246-d0123f3cec5c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at Pages.PlaceOrderPage.getActualPurchaseMessage(PlaceOrderPage.java:84)
+	at Tests.PlaceOrderTest.verifyPlaceOrderWithMissingFields(PlaceOrderTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">Tests.PlaceOrderTest#verifyPlaceOrderWithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;sweet-alert&apos;]/h2
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [9f5cc9df-6679-47e8-a246-d0123f3cec5c, findElement {value=//div[@class=&apos;sweet-alert&apos;]/h2, using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 35392, moz:profile: C:\Users\mohamed\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 9f5cc9df-6679-47e8-a246-d0123f3cec5c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at Pages.PlaceOrderPage.getActualPurchaseMessage(PlaceOrderPage.java:84)
+	at Tests.PlaceOrderTest.verifyPlaceOrderWithValidCredentials(PlaceOrderTest.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">Tests.PlaceOrderTest#verifyPlaceOrderWithWrongSyntax</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;sweet-alert&apos;]/h2
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [9f5cc9df-6679-47e8-a246-d0123f3cec5c, findElement {value=//div[@class=&apos;sweet-alert&apos;]/h2, using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 35392, moz:profile: C:\Users\mohamed\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 9f5cc9df-6679-47e8-a246-d0123f3cec5c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at Pages.PlaceOrderPage.getActualPurchaseMessage(PlaceOrderPage.java:84)
+	at Tests.PlaceOrderTest.verifyPlaceOrderWithWrongSyntax(PlaceOrderTest.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">Tests.PlaceOrderTest#verifyPlaceOrderWithoutAnyCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at Tests.PlaceOrderTest.verifyPlaceOrderWithoutAnyCredentials(PlaceOrderTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">Tests.SignUpTest#verifyValidSignUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Sign up successful.] but found [This user already exist.]
+	at Tests.SignUpTest.verifyValidSignUp(SignUpTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">Tests.ContactTest#goToHomePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">Tests.ContactTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">Tests.ContactTest#verifyContactFormSubmissionWithErrorEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: Unexpected alert dialog detected. Performed handler &quot;dismiss&quot;: Thanks for the message!!
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [06a1dc84-d86c-4b34-9c2f-a420fe3b0cc7, get {url=https://demoblaze.com/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 25964, moz:profile: C:\Users\mohamed\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 06a1dc84-d86c-4b34-9c2f-a420fe3b0cc7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
+	at BaseTests.BaseTestClass.goToHomePage(BaseTestClass.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">Tests.ContactTest#verifyContactFormSubmissionWithErrorName</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: Unexpected alert dialog detected. Performed handler &quot;dismiss&quot;: Thanks for the message!!
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [06a1dc84-d86c-4b34-9c2f-a420fe3b0cc7, get {url=https://demoblaze.com/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 25964, moz:profile: C:\Users\mohamed\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 06a1dc84-d86c-4b34-9c2f-a420fe3b0cc7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
+	at BaseTests.BaseTestClass.goToHomePage(BaseTestClass.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">Tests.CartTest#verifyCorrectTotalPrice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">Tests.CartTest#verifyEmptyCartDisplaysNothing</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">Tests.CartTest#verifyPlaceOrderFromCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">Tests.ContactTest#verifyContactFormSubmission</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">Tests.LogInTest#verifyLoginWithEmptyFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">Tests.LogInTest#verifyLoginWithInvalidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">Tests.LogInTest#verifyLoginWithWrongPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">Tests.LogInTest#verifyLoginWithWrongUsername</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">Tests.ProductTest#verifyAddToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">Tests.ProductTest#verifyProductDetailsVisibility</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">Tests.SignUpTest#verifyCloseButtonSignUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m28">Tests.SignUpTest#verifyEmptyPasswordSignUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">Tests.SignUpTest#verifyEmptySignUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">Tests.SignUpTest#verifyEmptyUsernameSignUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m31">Tests.SignUpTest#verifyExistingSignUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

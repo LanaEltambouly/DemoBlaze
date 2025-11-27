@@ -7,10 +7,12 @@ import Pages.Categories.MonitorsCatPage;
 import Pages.Categories.PhonesCatPage;
 import Pages.OtherPages.NextPage;
 import Pages.OtherPages.PreviousPage;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
@@ -50,6 +52,13 @@ public class BaseTestClass {
     public void goToHomePage(){
         driver.get("https://demoblaze.com/");
     }
+    @AfterMethod
+    public void clearAlert() {
+        try {
+            driver.switchTo().alert().accept();
+        } catch (NoAlertPresentException ignored) {}
+    }
+
 
     @AfterClass
     public void tearDown(){

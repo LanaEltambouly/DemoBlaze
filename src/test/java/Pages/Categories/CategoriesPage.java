@@ -1,12 +1,6 @@
 package Pages.Categories;
 import Pages.HomePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 public class CategoriesPage extends HomePage {
@@ -18,13 +12,19 @@ public class CategoriesPage extends HomePage {
         this.driver = driver;
 
     }
-
-
     public List<String> expectedAllProducts = Arrays.asList( "Sony vaio i5", "Sony vaio i7", "MacBook air",
             "Dell i7 8gb","2017 Dell 15.6 Inch","MacBook Pro","Apple monitor 24", "ASUS Full HD",
             "Samsung galaxy s6", "Nokia lumia 1520", "Nexus 6", "Samsung galaxy s7",
-            "Iphone 6 32gb", "Sony xperia z5", "HTC One M9");
+            "Iphone 6 32gb", "Sony xperia z5", "HTC One M9"
+    );
 
 
-}
+
+
+
+
+
+
+    }
+
 

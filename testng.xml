@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Tests" verbose="1">
+    <test name="Positive Scenarios">
+        <classes>
+            <class name="Tests.SignUpTest"/>
+            <class name="Tests.LogInTest"/>
+            <class name="Tests.CartTest"/>
+            <class name="Tests.PlaceOrderTest"/>
+            <class name="Tests.ProductTest"/>
+            <class name="Tests.ContactTest"/>
+            <class name="Tests.AboutUsTest"/>
+            <class name="Tests.CategoriesTest"/>
+            <class name="Tests.IntegrationTesting"/>
+
+
+        </classes>
+    </test>
+
+
+</suite>

@@ -122,6 +122,10 @@ public class HomePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(imgLocator)).isDisplayed();
     }
 
+
+
+
+
     public List<String> getProducts() {
         List<String> productNames = new ArrayList<>();
         products = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(productsTitles));

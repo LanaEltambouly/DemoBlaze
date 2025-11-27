@@ -26,9 +26,9 @@ public class ContactTest extends BaseTestClass {
         contactPage.setContactName("11111111111");
         contactPage.setContactMessage("This is a test message.");
         contactPage.clickOnSendMessage();
-        Assert.assertFalse(contactPage.getActualMess().contains(contactPage.getExpectedAnErrorMsgForName()));
+        Assert.assertTrue(contactPage.getActualMess().contains(contactPage.getExpectedAnErrorMsgForName()));
         contactPage.clickOnOk();
-        System.out.println("Test Case Failed");
+      //  System.out.println("Test Case Failed");
 
 
     }
@@ -39,9 +39,9 @@ public class ContactTest extends BaseTestClass {
         contactPage.setContactName("Test Name");
         contactPage.setContactMessage("This is a test message.");
         contactPage.clickOnSendMessage();
-        Assert.assertFalse(contactPage.getActualMess().contains(contactPage.getExpectedAnErrorMsgForEmail()));
+        Assert.assertTrue(contactPage.getActualMess().contains(contactPage.getExpectedAnErrorMsgForEmail()));
         contactPage.clickOnOk();
-        System.out.println("Test Case Failed");
+       // System.out.println("Test Case Failed");
 
     }
     @Test(priority = 2)
@@ -49,9 +49,9 @@ public class ContactTest extends BaseTestClass {
         contactPage = homepage.clickOnContact();
         contactPage.setContactMessage("This is a test message.");
         contactPage.clickOnSendMessage();
-        Assert.assertFalse(contactPage.getActualMess().contains(contactPage.getExpectedAnErrorMsgForEmptyUsernameAndPassword()));
+        Assert.assertTrue(contactPage.getActualMess().contains(contactPage.getExpectedAnErrorMsgForEmptyUsernameAndPassword()));
         contactPage.clickOnOk();
-        System.out.println("Test Case Failed");
+       // System.out.println("Test Case Failed");
     }
 
 

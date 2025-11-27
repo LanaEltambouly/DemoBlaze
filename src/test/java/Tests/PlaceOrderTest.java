@@ -39,7 +39,7 @@ public class  PlaceOrderTest extends BaseTestClass {
         placeOrderPage.enterMonth("");
         placeOrderPage.enterYear("");
         placeOrderPage.clickPurchase();
-        Assert.assertFalse(placeOrderPage.getActualMissingInfoResult().contains(placeOrderPage.getExpectedMissingInfoResult()));
+        Assert.assertTrue(placeOrderPage.getActualMissingInfoResult().contains(placeOrderPage.getExpectedMissingInfoResult()));
         placeOrderPage.clickOnOk();
     }
     @Test
@@ -56,8 +56,8 @@ public class  PlaceOrderTest extends BaseTestClass {
         placeOrderPage.enterMonth("mnjnj");
         placeOrderPage.enterYear("kjjj");
         placeOrderPage.clickPurchase();
-        Assert.assertFalse(placeOrderPage.getActualPurchaseMessage().contains("Error you should enter valid syntax"));
-        System.out.println("Test Case Failed");
+        Assert.assertTrue(placeOrderPage.getActualPurchaseMessage().contains("Error you should enter valid syntax"));
+
 
     }
     @Test
@@ -74,7 +74,6 @@ public class  PlaceOrderTest extends BaseTestClass {
         placeOrderPage.enterMonth("");
         placeOrderPage.enterYear("");
         placeOrderPage.clickPurchase();
-        Assert.assertFalse(placeOrderPage.getActualPurchaseMessage().contains("Please enter data in empty fields"));
-        System.out.println("Test Case Failed");
+        Assert.assertTrue(placeOrderPage.getActualPurchaseMessage().contains("Please enter data in empty fields"));
     }
 }
