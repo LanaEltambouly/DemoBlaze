@@ -1,4 +1,4 @@
-package HooksPackage;
+package BaseTests.HooksPackage;
 
 import Pages.*;
 import Pages.Categories.CategoriesPage;
@@ -21,7 +21,7 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 public class Hooks {          //hya hya el BaseTestClass bs notations bta3t cucumber
-    protected WebDriver driver;
+    public static WebDriver driver;
     protected WebDriverWait wait;
     protected HomePage homepage;
 
