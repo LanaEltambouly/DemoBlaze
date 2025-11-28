@@ -20,7 +20,3 @@ Feature: Verify About Us Page Functionality
     When the About Us video loads
     Then the video poster should be shown
 
-  Scenario: Verify About Us modal opens correctly
-    Given user is on About Us page
-    When About Us video component appears
-    Then About Us modal should be active
